@@ -78,7 +78,7 @@ st.markdown(
 
     <div class="header-container">
         <span class="big-text">Accurate Car Price Predictions at Your Fingertips!</span>
-        <span class="small-text">Know Your Car's Worth Before You Sell or Buy!</span>
+        <span class="small-text">Know Your Car's Worth Before You Sell or Buy! By James</span>
     </div>
     """,
     unsafe_allow_html=True)
