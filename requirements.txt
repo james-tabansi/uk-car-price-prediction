@@ -1,0 +1,5 @@
+fastapi
+pycaret
+streamlit
+mlflow
+uvicorn
