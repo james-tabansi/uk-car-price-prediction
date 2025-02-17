@@ -42,7 +42,7 @@ def predict(data: InputData):
 
 # Define request body schema for `/predStream`
 class NewInputData(BaseModel):
-    data: Dict[str, List]  # Expecting a dictionary where keys are column names
+    data: Dict[str, List]
 
 @app.post("/predStream/")
 def predictFromStreamlit(payload: NewInputData):

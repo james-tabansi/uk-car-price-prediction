@@ -83,7 +83,9 @@ st.markdown(
     """,
     unsafe_allow_html=True)
 
+# add spacing
 st.markdown("<br><br>", unsafe_allow_html=True)
+# get the input data
 data = pd.DataFrame(
     {
         "Mileage(miles)": [mileage],
@@ -98,20 +100,23 @@ data = pd.DataFrame(
     }
 )
 
+# display the data dynamically
 st.write(data)
 
 
 def makeRequest(data):
-    url = "http://127.0.0.1:8000/predStream/"  # Ensure trailing slash
+    url = "http://127.0.0.1:8000/predStream/"
 
-    json_data = {"data": data.to_dict(orient="list")}  # Convert DataFrame to JSON dictionary
+    # Convert DataFrame to JSON dictionary
+    json_data = {"data": data.to_dict(orient="list")}  
 
     response = requests.post(url, json=json_data)
-
+    
+    # return the response
     return response.json()['prediction']
 
 
-    # Custom button styling
+# Custom button styling for the button
 button_style = """
         <style>
         div.stButton > button {
@@ -134,8 +139,10 @@ button_style = """
     """
 st.markdown(button_style, unsafe_allow_html=True)
 
+# wrap button to the endpoint
 if st.button("Predict Car Price"):
     price = makeRequest(data)
+    # display the prediction in desired format
     st.markdown(
         f"""
         <div style="text-align: center; font-weight: bold; font-size: 24px;">
