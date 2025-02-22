@@ -3,3 +3,4 @@ pycaret
 streamlit
 mlflow
 uvicorn
+evidently

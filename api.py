@@ -57,8 +57,32 @@ def predictFromStreamlit(payload: NewInputData):
 
     except Exception as e:
         return {"error": str(e)}
+    
+@app.post("/predBatch/")
+def batchPredict(payload: NewInputData):
+    try:
+        # Convert JSON back into a DataFrame
+        df = pd.DataFrame.from_dict(payload.data)
 
+        # Make prediction
+        prediction = model.predict(df)
+
+        return {"prediction": prediction.tolist()}
+
+    except Exception as e:
+        return {"error": str(e)}
+    
 
 # Run the API locally
 if __name__ == "__main__":
+    # import requests
+    # import pandas as pd
+    # url = "http://127.0.0.1:8000/predBatch/"
+    # df = pd.read_csv(r"data\Cleaned_used_cars_data.csv")
+    # df = df.head()
+    # df.drop('Price', axis=1, inplace=True)
+    # json_data = {"data": df.to_dict(orient="list")}
+    # print(json_data)
+    # response = requests.post(url, json=json_data)
+    # print(response.json())
     uvicorn.run(app, host="127.0.0.1", port=8000)
