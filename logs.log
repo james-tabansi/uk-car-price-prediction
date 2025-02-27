@@ -1299,3 +1299,17 @@ Alternately, you can install this by running `pip install pycaret[models]`
 * 'allow_population_by_field_name' has been renamed to 'populate_by_name'
   warnings.warn(message, UserWarning)
 
+2025-02-27 20:00:56,504:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-02-27 20:00:56,504:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-02-27 20:00:56,504:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-02-27 20:00:56,504:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-02-27 20:01:01,100:INFO:Initializing load_model()
+2025-02-27 20:01:01,100:INFO:load_model(model_name=best_model, platform=None, authentication=None, verbose=True)
+2025-02-27 20:01:01,307:WARNING:C:\Users\TabansiJ\.conda\envs\fap\lib\site-packages\pydantic\_internal\_config.py:345: UserWarning: Valid config keys have changed in V2:
+* 'allow_population_by_field_name' has been renamed to 'populate_by_name'
+  warnings.warn(message, UserWarning)
+

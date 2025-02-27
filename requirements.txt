@@ -1,6 +1,8 @@
-fastapi
-pycaret
-streamlit
-mlflow
-uvicorn
-evidently
+fastapi==0.115.8
+pycaret==3.3.2
+streamlit==1.42.0
+mlflow==2.14.0
+uvicorn==0.34.0
+evidently==0.6.5
+seaborn==0.13.2
+pandas==2.1.4
